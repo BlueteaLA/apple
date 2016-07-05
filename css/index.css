@@ -1,0 +1,841 @@
+body,h1,h2,h3,h4,h5,h6,ul,li,dl,dt,dd,p,pre{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+img{
+	border: 0;
+}
+body{
+	font-family: "微软雅黑",Arial;
+}
+
+
+/* 头部开始 */
+.header{
+	position: relative;
+	font-size: 14px;
+	line-height: 44px;
+	z-index: 9999;
+}
+
+/* 大屏 */
+.header .max-nav{
+	max-width: 1024px;
+	margin: 0 auto;
+	text-align: justify;
+	box-sizing: border-box;
+	padding: 0 22px;
+}
+.header .max-nav li{
+	display: inline-block;
+}
+.header .max-nav:after{
+	content: "";
+	display: inline-block;
+	width: 100%;
+	height: 0;
+	line-height: 0;
+}
+.header .max-nav li a{
+	display: block;
+	height: 100%;
+	color: #fff;
+	opacity: 0.8;
+}
+.header .max-nav li a:hover{
+	opacity: 0.6;
+}
+.header .max-nav li a i{
+	font-size: 18px!important;
+}
+
+
+
+/* 小屏 */
+.header .min-nav{
+	max-width: 768px;
+}
+.header .min-nav .nav{
+	text-align: justify;
+}
+.header .min-nav .nav>div{
+	display: inline-block;
+	color: #fff;
+	opacity: 0.8;
+	cursor: pointer;
+	vertical-align: middle;
+}
+.header .min-nav .nav>div:hover{
+	opacity: 0.6;
+}
+.header .min-nav .nav:after{
+	content: "";
+	display: inline-block;
+	width: 100%;
+	height: 0;
+	line-height: 0;
+}
+.header .min-nav .nav .menu{
+	width: 48px;
+	height: 48px;
+	box-sizing: border-box;
+	padding: 10px 15px;
+}
+.header .min-nav .nav .menu span{
+	display: block;
+	width: 100%;
+	height: 0;
+	border-top: 1px solid #fff;
+	margin-top: 8px;
+	transition: all 0.5s;
+}
+.header .min-nav .nav-list{
+	width: 100%;
+	background: #000;
+	margin-left: -15px;
+	margin-right: -15px;
+	padding-right: 30px;
+	overflow: hidden;
+	transition: height 0.6s;
+	height: 0;
+}
+.header .min-nav .nav-list li{
+	margin: 0 44px;
+	border-bottom: 1px solid #333;
+}
+.header .min-nav .nav-list li:nth-child(1){
+	padding-top: 20px;
+}
+.header .min-nav .nav-list li a{
+	display: block;
+	width: 100%;
+	color: #fff;
+	opacity: 0.8;
+}
+.header .min-nav .nav-list li a:hover{
+	opacity: 0.6;
+}
+.header .min-nav .nav-list li i{
+	color: #fff;
+	font-size: 18px;
+}
+.header .min-nav .nav-list li input{
+	border: 0;
+	background: #000;
+	color: #fff;
+	margin-left: 10px;
+	width: 80%;
+	height: 100%;
+	font-size: 16px;
+}
+/* 头部结束 */
+
+
+
+/* banner开始 */
+/* banner图片 */
+.banner{
+	/*background: #666;*/
+	position: relative;
+	overflow: hidden;
+}
+.banner .banner-pho{
+	width: 100%;
+	height: 100%;
+}
+.banner .banner-pho .items{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #fff;
+}
+.banner .banner-pho .items .text{
+	position: absolute;
+	bottom:150px;
+	width: 100%;
+	height: auto;
+	transform: translateY(-50%);
+}
+.banner .banner-pho .items .text .h2{
+	width: 100%;
+}
+.banner .banner-pho .items .text h2{
+	width: 100%;
+	text-align: center;
+	font-weight: 300;
+}
+.banner .banner-pho .items .text p{
+	text-align: center;
+	margin-top: 20px;
+}
+.banner .banner-pho .items .photos{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+/* banner点点 */
+.banner .banner-lis{
+	width: 112px;
+	height: 8px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 5;
+}
+.banner .banner-lis ul{
+	width: 100%;
+	height: 100%;
+}
+.banner .banner-lis ul li{
+	width: 8px;
+	height: 8px;
+	background: #999;
+	float: left;
+	border-radius: 50%;
+	margin: 0 10px;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+/* banner按钮 */
+.banner .banner-btn{
+	width: 100%;
+	height: 0;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	z-index: 5;
+	box-sizing: border-box;
+}
+.banner .banner-btn>div{
+	width: 67px;
+	height: 128px;
+	cursor: pointer;
+	position: relative;
+}
+.banner .banner-btn .btn-left{
+	float: left;
+	transform: translateY(-50%);
+}
+.banner .banner-btn .btn-right{
+	float: right;
+	transform: translateY(-50%);
+}
+.banner .banner-btn .btn-left:before{
+	content: "";
+	width: 0;
+	height: 0;
+	border: 30px solid transparent;
+	border-right-color: #999;
+	position: absolute;
+	left: -10px;
+	top: 29px;
+}
+.banner .banner-btn .btn-left:after{
+	content: "";
+	width: 0;
+	height: 0;
+	border: 30px solid transparent;
+	border-right-color: #fff;
+	position: absolute;
+	left: -8px;
+	top: 29px;
+}
+.banner .banner-btn .btn-right:before{
+	content: "";
+	width: 0;
+	height: 0;
+	border: 30px solid transparent;
+	border-left-color: #999;
+	position: absolute;
+	right: -10px;
+	top: 29px;
+}
+.banner .banner-btn .btn-right:after{
+	content: "";
+	width: 0;
+	height: 0;
+	border: 30px solid transparent;
+	border-left-color: #fff;
+	position: absolute;
+	right: -8px;
+	top: 29px;
+}
+.banner .banner-btn>div:hover{
+	opacity: 0.8;
+}
+
+
+.banner .banner-lis ul li#hot{
+	border: 1px solid #08c;
+	background: transparent;
+}
+.banner .banner-pho .items:nth-child(1){
+	z-index: 1;
+}
+
+/* banner结束 */
+
+
+
+/* 广告开始 */
+.promos{
+	height: auto;
+	margin-top: 20px;
+}
+.promos .row{
+	height: auto;
+}
+.promos .items{
+	height: 204px;
+	border: 2px solid #fff;
+	box-sizing: border-box;
+}
+/* 广告结束 */
+
+/* 友情链接开始 */
+.link{
+	background: #f2f2f2;
+}
+.link .main-link .row{
+	width: 100%;
+	height: 100%;
+}
+/* 友情链接结束 */
+
+
+
+
+
+/* 底部开始 */
+.footer{
+	background: #f2f2f2;
+	overflow: hidden;
+}
+.footer ul li{
+	display: inline-block;
+	color: #999;
+	font-size: 10px;
+}
+.footer ul:nth-child(1) a{
+	color: #08c;
+}
+.footer ul:nth-child(1) a:hover{
+	text-decoration: underline;
+	color: #333;
+}
+.footer ul:last-child a{
+	color: #999;
+}
+.footer ul:last-child a:hover{
+	text-decoration: underline;
+}
+
+
+
+/* pc */
+/* 底部开始 */
+.footer .max-footer{
+	max-width: 980px;
+	height: auto;
+	padding: 20px 0 24px;
+	margin: 0 auto;
+}
+.footer .max-footer ul:nth-child(1){
+	padding-bottom: 6px;
+	margin-bottom: 6px;
+	border-bottom: 1px solid #e3e3e3;
+}
+.footer .max-footer ul:nth-child(2) li:nth-child(1)~li{
+	padding: 0 8px;
+	color: #d6d6d6;
+}
+.footer .max-footer ul:nth-child(2) li:nth-child(1)~li a{
+	color: #666;
+}
+.footer .max-footer ul:nth-child(2) li:nth-child(1)~li:last-child a{
+	color: #666;
+	display: inline-block;
+	height: 16px;
+	vertical-align: middle;
+	background: url("../images/china.png") no-repeat;
+	padding-left: 21px;
+}
+.footer .max-footer ul:nth-child(2) li:nth-child(1)~li a:hover{
+	text-decoration: underline;
+	color: #333;
+}
+.footer .max-footer ul:nth-child(2) li:last-child{
+	float: right;
+	vertical-align: middle;
+}
+/* pc底部结束 */
+
+
+/* 手机 */
+.footer .min-footer{
+	min-width: 440px;
+	height: auto;
+	padding: 20px 0;
+	margin: 0 auto;
+}
+.footer .min-footer ul:nth-child(2){
+	padding: 10px 0;
+}
+.footer .min-footer ul:nth-child(2) li{
+	vertical-align: middle;
+}
+.footer .min-footer ul:nth-child(2) a{
+	color: #666;
+	display: inline-block;
+	height: 16px;
+	vertical-align: middle;
+	background: url("../images/china.png") no-repeat;
+	padding-left: 21px;
+}
+.footer .min-footer ul:nth-child(2) a:hover{
+	text-decoration: underline;
+}
+.footer .min-footer ul:nth-child(4) li{
+	padding: 0 8px;
+	color: #d6d6d6;
+}
+.footer .min-footer ul:nth-child(4) li:nth-child(1){
+	padding-left: 0;
+}
+.footer .min-footer ul:nth-child(4) li a{
+	color: #777;
+}
+.footer .min-footer ul:nth-child(4) li a:hover{
+	text-decoration: underline;
+	color: #333;
+}
+/* 手机底部结束 */
+/* 底部结束 */
+
+
+
+/* 手机 */
+@media screen and (max-width: 767px) {
+	/* 头部开始 */
+	.header{
+		height: 48px;
+		background: rgba(0,0,0,1);
+	}
+	.header .max-nav{
+		display: none;
+	}
+	.header .min-nav{
+		display: block;
+	}
+	/* 头部结束 */
+
+	/* banner开始 */
+	.banner{
+		height: 391px;
+	}
+	.banner .banner-pho .items .text{
+		bottom: 150px;
+	}
+	.banner .banner-pho .items .text .h2{
+		height: 31px;
+	}
+	.banner .banner-pho .items .text h2{
+		height: 31px;
+		font-size: 28px;
+	}
+	.banner .banner-pho .items .text p{
+		font-size: 16px;
+		line-height: 26px;
+	}
+	.banner .banner-pho .items .photos{
+		height: 150px;
+	}
+	.banner .banner-pho .items:nth-child(1) .text .h2{
+		background: url("../images/iphone_6s_small.png") center no-repeat;
+	}
+	.banner .banner-pho .items:nth-child(1) .photos{
+		background: url("../images/iphone_6s_small.jpg") center top no-repeat;
+	}
+	.banner .banner-pho .items:nth-child(2) .photos{
+		background: url("../images/ipad_pro_family_small.jpg") center top no-repeat;
+	}
+	.banner .banner-pho .items:nth-child(3) .text .h2{
+		background: url("../images/watch_small.png") center no-repeat;
+	}
+	.banner .banner-pho .items:nth-child(3) .photos{
+		background: url("../images/apple_watch_trio_small.jpg") center no-repeat;
+	}
+	.banner .banner-pho .items:nth-child(4) .photos{
+		background: url("../images/macbook_small.png") center no-repeat;
+	}
+	/* banner结束 */
+
+	/* 广告开始 */
+	.promos .items:nth-child(1){
+		background: url("../images/hp_tiles_ipad_small.jpg") center no-repeat;
+	}
+	.promos .items:nth-child(2){
+		background: url("../images/tradeup_small.jpg") center no-repeat;
+	}
+	.promos .items:nth-child(3){
+		background: url("../images/promo_applepay_geo_alt_small.jpg") center no-repeat;
+	}
+	.promos .items:nth-child(4){
+		background: url("../images/teaser_small.jpg") center no-repeat;
+	}
+	/* 广告结束 */
+
+	/* 友情链接开始 */
+	.link{
+		background: #f2f2f2;
+	}
+	.link .main-link .row{
+		margin-left: 0!important;
+	}
+	.link .main-link .row .cols{
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+		margin-right: -30px;
+	}
+	.link .main-link .row h3{
+		width: 100%;
+		font-size: 13px;
+		height: 40px;
+		line-height: 40px;
+		border-bottom: 1px solid #e3e3e3;
+		margin-right: -100px;
+		position: relative;
+		opacity: 0.7;
+	}
+	.link .main-link .row h3 a{
+		display: block;
+		width: 100%;
+		height: 100%;
+		color: #111;
+	}
+	.link .main-link .row h3:hover{
+		opacity: 0.8;
+	}
+	.link .main-link .row h3:after{
+		content: "+";
+		position: absolute;
+		right: 0;
+		top:0;
+		cursor: pointer;
+		transform: rotate(0deg);
+		transition: transform 0.5s;
+		
+	}
+
+	.link .main-link .row ul{
+		display: none;
+	} 
+	.link .main-link .row ul li{
+		height: 30px;
+		line-height: 30px;
+		font-size: 12px;
+		box-sizing: border-box;
+		padding-left: 20px;
+		opacity: 0.7;
+	}
+	.link .main-link .row ul li a{
+		display: block;
+		width: 100%;
+		height: 100%;
+		color: #111;
+	}
+	.link .main-link .row ul li a:hover{
+		text-decoration: underline;
+		opacity: 0.8;
+	}
+	/* 友情链接结束 */
+
+	/* 底部开始 */
+	.footer .max-footer{
+		display: none;
+	}
+	.footer .min-footer{
+		display: block;
+	}
+	/* 底部结束 */
+}
+
+
+/* 平板 */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+	/* 头部开始 */
+	.header{
+		height: 44px;
+		background: rgba(0,0,0,0.8);
+	}
+	.header .max-nav{
+		display: block;
+	}
+	.header .min-nav{
+		display: none;
+	}
+	/* 头部结束 */
+
+	/* banner开始 */
+	.banner{
+		height: 650px;
+	}
+	.banner .banner-pho .items .text{
+		bottom: 389px;
+	}
+	.banner .banner-pho .items .text .h2{
+		height: 40px;
+	}
+	.banner .banner-pho .items .text h2{
+		height: 40px;
+		font-size: 44px;
+	}
+	.banner .banner-pho .items .text p{
+		font-size: 28px;
+		font-weight: 100;
+	}
+	.banner .banner-pho .items .photos{
+		height: 389px;
+	}
+	.banner .banner-pho .items:nth-child(1) .text .h2{
+		background: url("../images/iphone_6s_medium.png") center no-repeat;
+	}
+	.banner .banner-pho .items:nth-child(1) .photos{
+		background: url("../images/iphone_6s_medium.jpg") center top no-repeat;
+	}
+	.banner .banner-pho .items:nth-child(2) .photos{
+		background: url("../images/ipad_pro_family_medium.jpg") center top no-repeat;
+	}
+	.banner .banner-pho .items:nth-child(3) .text .h2{
+		background: url("../images/watch_medium.png") center no-repeat;
+	}
+	.banner .banner-pho .items:nth-child(3) .photos{
+		background: url("../images/apple_watch_trio_medium.jpg") center no-repeat;
+	}
+	.banner .banner-pho .items:nth-child(4) .photos{
+		background: url("../images/macbook_medium.png") center no-repeat;
+	}
+	/* banner结束 */
+	/* 广告开始 */
+	.promos .items:nth-child(1){
+		background: url("../images/hp_tiles_ipad_medium.jpg") center no-repeat;
+	}
+	.promos .items:nth-child(2){
+		background: url("../images/tradeup_medium.jpg") center no-repeat;
+	}
+	.promos .items:nth-child(3){
+		background: url("../images/promo_applepay_geo_alt_medium.jpg") center no-repeat;
+	}
+	.promos .items:nth-child(4){
+		background: url("../images/teaser_medium.jpg") center no-repeat;
+	}
+	/* 广告结束 */
+
+	/* 友情链接开始 */
+	.link{
+		height: 260px;
+	}
+	.link .main-link{
+		max-width: 1024px;
+		height: 100%;
+		margin: 0 auto;
+		padding: 32px 22px 20px;
+		box-sizing: border-box;
+	}
+	.link .main-link .row{
+		width: 100%;
+		height: 100%;
+		margin: 0!important;
+		line-height: 20px;
+	}
+	.link .main-link .row h3{
+		height: 20px;
+		font-size: 11px;
+		opacity: 0.9;
+	}
+	.link .main-link .row h3 a{
+		color: #111;
+	}
+	.link .main-link .row ul li{
+		height: 20px;
+		font-size: 11px;
+		font-weight: bold;
+	}
+	.link .main-link .row ul li a{
+		color: #111;
+		opacity: 0.6;
+	}
+	.link .main-link .row ul li a:hover{
+		text-decoration: underline;
+		opacity: 0.8;
+	}
+	.link .main-link .row h3:nth-of-type(2){
+		margin-top: 20px;
+	}
+	/* 友情链接结束 */
+
+	/* 底部开始 */
+	.footer .max-footer{
+		display: block;
+	}
+	.footer .min-footer{
+		display: none;
+	}
+	/* 底部结束 */
+}
+
+
+/* pc */
+@media screen and (min-width: 1024px) {
+	/* 头部开始 */
+	.header{
+		height: 44px;
+		background: rgba(0,0,0,0.8);
+	}
+	.header .max-nav{
+		display: block;
+	}
+	.header .min-nav{
+		display: none;
+	}
+	/* 头部结束 */
+
+	/* banner开始 */
+	.banner{
+		height: 650px;
+	}
+	.banner .banner-pho .items .text{
+		bottom: 389px;
+	}
+	.banner .banner-pho .items .text .h2{
+		height: 40px;
+	}
+	.banner .banner-pho .items .text h2{
+		height: 40px;
+		font-size: 44px;
+	}
+	.banner .banner-pho .items .text p{
+		font-size: 28px;
+		font-weight: 100;
+	}
+	.banner .banner-pho .items .photos{
+		height: 389px;
+	}
+	.banner .banner-pho .items:nth-child(1) .text .h2{
+		background: url("../images/iphone_6s_medium.png") center no-repeat;
+	}
+	.banner .banner-pho .items:nth-child(1) .photos{
+		background: url("../images/iphone_6s_medium.jpg") center top no-repeat;
+	}
+	.banner .banner-pho .items:nth-child(2) .photos{
+		background: url("../images/ipad_pro_family_medium.jpg") center top no-repeat;
+	}
+	.banner .banner-pho .items:nth-child(3) .text .h2{
+		background: url("../images/watch_medium.png") center no-repeat;
+	}
+	.banner .banner-pho .items:nth-child(3) .photos{
+		background: url("../images/apple_watch_trio_medium.jpg") center no-repeat;
+	}
+	.banner .banner-pho .items:nth-child(4) .photos{
+		background: url("../images/macbook_medium.png") center no-repeat;
+	}
+	/* banner结束 */
+
+	/* 广告开始 */
+	.promos .items:nth-child(1){
+		background: url("../images/hp_tiles_ipad_large.jpg") center no-repeat;
+	}
+	.promos .items:nth-child(2){
+		background: url("../images/tradeup_large.jpg") center no-repeat;
+	}
+	.promos .items:nth-child(3){
+		background: url("../images/promo_applepay_geo_alt_large.jpg") center no-repeat;
+	}
+	.promos .items:nth-child(4){
+		background: url("../images/teaser_large.jpg") center no-repeat;
+	}
+	/* 广告结束 */
+
+	/* 友情链接开始 */
+	.link{
+		height: 260px;
+	}
+	.link .main-link{
+		max-width: 1024px;
+		height: 100%;
+		margin: 0 auto;
+		padding: 32px 22px 20px;
+		box-sizing: border-box;
+	}
+	.link .main-link .row{
+		width: 100%;
+		height: 100%;
+		margin: 0!important;
+		line-height: 20px;
+	}
+	.link .main-link .row h3{
+		height: 20px;
+		font-size: 11px;
+		opacity: 0.9;
+	}
+	.link .main-link .row h3 a{
+		color: #111;
+	}
+	.link .main-link .row ul li{
+		height: 20px;
+		font-size: 11px;
+		font-weight: bold;
+	}
+	.link .main-link .row ul li a{
+		color: #111;
+		opacity: 0.6;
+	}
+	.link .main-link .row ul li a:hover{
+		text-decoration: underline;
+		opacity: 0.8;
+	}
+	.link .main-link .row h3:nth-of-type(2){
+		margin-top: 20px;
+	}
+	/* 友情链接结束 */
+
+	/* 底部开始 */
+	.footer .max-footer{
+		display: block;
+	}
+	.footer .min-footer{
+		display: none;
+	}
+	/* 底部结束 */	
+}
+
+
+
+
+
+
+/* 小屏头部动画 */
+.header .min-nav .nav .menu#active span:nth-child(1){
+	transform: translateY(4px) rotate(45deg);
+}
+.header .min-nav .nav .menu#active span:nth-child(2){
+	transform: translateY(-4px) rotate(135deg);
+}
+
+/* 小屏链接动画 */
+.link .main-link .row .cols ul#active{
+	display: block;
+}
+.link .main-link .row  .cols h3#active:after{
+	transform: rotate(-45deg);
+}
